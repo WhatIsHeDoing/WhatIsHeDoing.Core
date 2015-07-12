@@ -40,6 +40,16 @@ namespace WhatIsHeDoing.Core.Test.Extensions
             }
 
             [TestMethod]
+            public void SimpleJaggedCollections()
+            {
+                var first = new int[] { 1 };
+                var second = new int[] { 2, 3 };
+                var third = new int[] { 4 };
+                var result = first.IterateJagged(second, third).ToArray();
+                CollectionAssert.AreEqual(new [] { 1, 2, 4, 3 }, result);
+            }
+
+            [TestMethod]
             public void JaggedWithEmptyAndNullCollections()
             {
                 var firstRow = new List<int> { 1 };
