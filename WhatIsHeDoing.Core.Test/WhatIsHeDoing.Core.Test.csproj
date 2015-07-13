@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Extensions\IEnumerableExtensionsTest.cs" />
     <Compile Include="Extensions\LongExtensionsTest.cs" />
+    <Compile Include="Extensions\StringExtensionsTest.cs" />
     <Compile Include="Extensions\ObjectExtensionsTest.cs" />
   </ItemGroup>
   <Choose>
