@@ -17,8 +17,8 @@ namespace WhatIsHeDoing.Core.Extensions
         /// <exception cref="ArgumentNullException">
         /// If either argument is null
         /// </exception>
-        public static object AsFluent
-            (this object @this, Action action)
+        public static T AsFluent<T>
+            (this T @this, Action action)
         {
             if (@this == null)
             {

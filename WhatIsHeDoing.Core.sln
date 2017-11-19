@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatIsHeDoing.Core", "WhatIsHeDoing.Core\WhatIsHeDoing.Core.csproj", "{07796B9A-4D14-4311-B5BA-6FF45C58758E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{92A0E0AC-D22F-4D03-8C6E-1E52125B9908}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatIsHeDoing.Core.Tests", "WhatIsHeDoing.Core.Tests\WhatIsHeDoing.Core.Tests.csproj", "{BDEB7701-418C-41BC-B339-247BFE60E79A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07796B9A-4D14-4311-B5BA-6FF45C58758E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07796B9A-4D14-4311-B5BA-6FF45C58758E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07796B9A-4D14-4311-B5BA-6FF45C58758E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07796B9A-4D14-4311-B5BA-6FF45C58758E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDEB7701-418C-41BC-B339-247BFE60E79A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDEB7701-418C-41BC-B339-247BFE60E79A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDEB7701-418C-41BC-B339-247BFE60E79A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDEB7701-418C-41BC-B339-247BFE60E79A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6615774C-7F27-433E-BE69-328116E4C6A8}
+	EndGlobalSection
+EndGlobal

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Reflection;
+using System;
 
 namespace WhatIsHeDoing.Core.Extensions
 {
@@ -17,17 +16,10 @@ namespace WhatIsHeDoing.Core.Extensions
         /// <exception cref="TypeLoadException">
         /// Thrown if TResult does not have a Parse method.
         /// </exception>
-        public static TResult Parse<TResult>(this string value)
-        {
-            TResult result;
-            
-            if (!value.TryParse<TResult>(out result))
-            {
-                throw new TypeLoadException("Cannot find Parse method");
-            }
-
-            return result;
-        }
+        public static TResult Parse<TResult>(this string value) =>
+            value.TryParse(out TResult result)
+                ? result
+                : throw new TypeLoadException("Cannot find Parse method");
 
         /// <summary>
         /// Tries to invoke a Parse method from the TResult type on the value.

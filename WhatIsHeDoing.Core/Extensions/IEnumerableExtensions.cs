@@ -1,8 +1,6 @@
-﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using System.Text;
 
 namespace WhatIsHeDoing.Core.Extensions
 {
@@ -56,8 +54,8 @@ namespace WhatIsHeDoing.Core.Extensions
             while (true)
             {
                 // Filter all the iterators to those that have items left.
-                var availableIterators =
-                    iterators.Where(i => i.MoveNext())
+                var availableIterators = iterators
+                    .Where(i => i.MoveNext())
                     .ToList();
 
                 // Break out if none are available.
@@ -68,7 +66,8 @@ namespace WhatIsHeDoing.Core.Extensions
 
                 // Return these available values (column).
                 yield return availableIterators
-                    .Select(i => i.Current).ToList();
+                    .Select(i => i.Current)
+                    .ToList();
             }
         }
     }
