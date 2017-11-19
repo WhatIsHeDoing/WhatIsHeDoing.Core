@@ -6,7 +6,7 @@
     <Authors>WhatIsHeDoing</Authors>
     <Description>A library of extensions to core .Net functionality.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageReleaseNotes>Upgrading to .NET Standard 2.0</PackageReleaseNotes>
     <Copyright></Copyright>
     <PackageTags>core extensions</PackageTags>
     <PackageLicenseUrl>https://unlicense.org/</PackageLicenseUrl>
@@ -26,10 +26,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference
-      Condition="!Exists('C:\Program Files\dotnet\sdk\2.0.3\Roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll')"
-      Include="Microsoft.Net.Compilers"
-      Version="2.4.0" />
+    <PackageReference Condition="!Exists('C:\Program Files\dotnet\sdk\2.0.3\Roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll')" Include="Microsoft.Net.Compilers" Version="2.4.0" />
   </ItemGroup>
 
   <ItemGroup>
