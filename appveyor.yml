@@ -21,6 +21,6 @@ test_script:
 - ps: dotnet test --configuration Release .\WhatIsHeDoing.Core.Tests\WhatIsHeDoing.Core.Tests.csproj
 deploy_script:
 - ps: >-
-    $recentPackage = (Get-ChildItem .\WhatIsHeDoing.Core.*.nupkg | Sort-Object -Descending Name)[0].FullName
+    $recentPackage = (Get-ChildItem .\WhatIsHeDoing.Core\bin\Release\WhatIsHeDoing.Core.*.nupkg | Sort-Object -Descending Name)[0].FullName
 
     nuget push $recentPackage -ApiKey $env:ApiKey -Source https://www.nuget.org/api/v2/package
