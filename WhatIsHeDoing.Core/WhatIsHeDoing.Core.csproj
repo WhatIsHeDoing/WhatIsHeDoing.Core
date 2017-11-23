@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
     <PackageId>WhatIsHeDoing.Core</PackageId>
-    <PackageVersion>1.2.0</PackageVersion>
+    <PackageVersion>1.3.0</PackageVersion>
     <Authors>WhatIsHeDoing</Authors>
     <Description>A library of extensions to core .Net functionality.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Upgrading to .NET Standard 2.0</PackageReleaseNotes>
+    <PackageReleaseNotes>Targeting multiple frameworks.</PackageReleaseNotes>
     <Copyright></Copyright>
     <PackageTags>core extensions</PackageTags>
     <PackageLicenseUrl>https://unlicense.org/</PackageLicenseUrl>
