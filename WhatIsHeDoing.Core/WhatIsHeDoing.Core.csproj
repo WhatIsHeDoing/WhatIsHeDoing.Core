@@ -4,15 +4,19 @@
     <PackageId>WhatIsHeDoing.Core</PackageId>
     <PackageVersion>1.3.0</PackageVersion>
     <Authors>WhatIsHeDoing</Authors>
-    <Description>A library of extensions to core .Net functionality.</Description>
+    <Description>A library of extensions to core .NET functionality.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>Targeting multiple frameworks.</PackageReleaseNotes>
     <Copyright></Copyright>
     <PackageTags>core extensions</PackageTags>
     <PackageLicenseUrl>https://unlicense.org/</PackageLicenseUrl>
     <PackageProjectUrl>https://bitbucket.org/WhatIsHeDoing/whatishedoing.core</PackageProjectUrl>
-    <Version>1.2.0</Version>
+    <Version>1.3.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+    <FileVersion>1.3.0.0</FileVersion>
+    <Company />
+    <RepositoryUrl>https://bitbucket.org/WhatIsHeDoing/whatishedoing.core</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
