@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using WhatIsHeDoing.Core.Extensions;
@@ -7,6 +8,21 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
 {
     public class IEnumerableExtensionsTest
     {
+        public class Aggregate
+        {
+            [Fact]
+            public void MultiplicationByIndex()
+            {
+                var collection = Enumerable.Range(0, 4);
+
+                var actual = collection.Aggregate
+                    (0, (agg, value, index) => agg + (value * index));
+
+                const int expected = (0 * 0) + (1 * 1) + (2 * 2) + (3 * 3);
+                Assert.Equal(expected, actual);
+            }
+        }
+
         public class IterateJagged
         {
             [Fact]
@@ -76,6 +92,42 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
 
                 Assert.Equal(expectedThirdColumn,actualThirdColum);
             }
+        }
+
+        public class Randomise
+        {
+            [Fact]
+            public void ThrowsForNull() => Assert.Throws<ArgumentNullException>
+                (() => IEnumerableExtensions.Randomise<IEnumerable<int>>(null));
+
+            [Fact]
+            public void Randomises()
+            {
+                var integers = Enumerable.Range(0, 1000).ToList();
+
+                var randomised = integers.Randomise().ToList();
+                Assert.Equal(integers.Count, randomised.Count);
+                Assert.NotEqual(integers, randomised);
+
+                var resorted = randomised.OrderBy(i => i);
+                Assert.Equal(integers, resorted);
+            }
+        }
+
+        public class WhereNotNull
+        {
+            [Fact]
+            public void FiltersNulls()
+            {
+                var strings = new List<string> { "Hello", null, "world!" };
+                var actual = strings.WhereNotNull();
+                var expected = new List<string> { "Hello", "world!" };
+                Assert.Equal(expected, actual);
+            }
+
+            [Fact]
+            public void ThrowsForNull() => Assert.Throws<ArgumentNullException>
+                (() => IEnumerableExtensions.WhereNotNull<List<int>>(null));
         }
 
         public class ZipJagged

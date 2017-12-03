@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
@@ -9,6 +10,27 @@ namespace WhatIsHeDoing.Core.Extensions
     /// </summary>
     public static class IEnumerableExtensions
     {
+        /// <summary>
+        /// Aggregate with the index of the current element.
+        /// </summary>
+        /// <remarks>Leaves the underlying implementation to throw!</remarks>
+        /// <typeparam name="TSource">Source type</typeparam>
+        /// <typeparam name="TAccumulate">Aggregate type</typeparam>
+        /// <param name="source">To iterate over</param>
+        /// <param name="seed">Initial aggregate</param>
+        /// <param name="func">To apply</param>
+        /// <returns>Aggregate</returns>
+        public static TAccumulate Aggregate<TSource, TAccumulate>
+            (this IEnumerable<TSource> source, TAccumulate seed,
+                Func<TAccumulate, TSource, int, TAccumulate> func)
+        {
+            var result = seed;
+            var index = 0;
+
+            return source.Aggregate(result,
+                (current, element) => func(current, element, index++));
+        }
+
         /// <summary>
         /// Flattens a collection of collections of unequal lengths
         /// by calling <see cref="ZipJagged">ZipJagged</see> and flattens them.
@@ -28,6 +50,31 @@ namespace WhatIsHeDoing.Core.Extensions
                 }
             }
         }
+
+        /// <summary>
+        /// Returns a randomised order of the collection.
+        /// </summary>
+        /// <typeparam name="T">Source type</typeparam>
+        /// <param name="source">This collection</param>
+        /// <returns>Collection or null if it is null</returns>
+        /// <exception cref="ArgumentNullException">
+        /// Thrown if the source is null
+        /// </exception>
+        public static IEnumerable<T> Randomise<T>(this IEnumerable<T> source) =>
+            source != null
+            ? source.OrderBy(e => new Random(Guid.NewGuid().GetHashCode()).Next())
+            : throw new ArgumentNullException(nameof(source));
+
+        /// <summary>
+        /// Filters all null elements from a collection.
+        /// </summary>
+        /// <typeparam name="T">Any type</typeparam>
+        /// <param name="source">To iterate over</param>
+        /// <returns>Collection</returns>
+        public static IEnumerable<T> WhereNotNull<T>(this IEnumerable<T> source) =>
+            source != null
+            ? source.Where(e => e != null)
+            : throw new ArgumentNullException(nameof(source));
 
         /// <summary>
         /// Enables a collection of unequal collection lengths
