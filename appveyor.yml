@@ -1,9 +1,6 @@
 version: 1.0.{build}
 image: Visual Studio 2017
 platform: Any CPU
-environment:
-  ApiKey:
-    secure: 0vvD9xkaKen4fUz/3PIi0hbKx6Nyggnvlv8/EOyMtzG/t9T4h/3pdJQJQGa9Tf1z
 build_script:
 - ps: >-
     dotnet restore
@@ -11,8 +8,13 @@ build_script:
     dotnet build --configuration Release
 test_script:
 - ps: dotnet test --configuration Release .\WhatIsHeDoing.Core.Tests\WhatIsHeDoing.Core.Tests.csproj
-deploy_script:
-- ps: >-
-    $recentPackage = (Get-ChildItem .\WhatIsHeDoing.Core\bin\Release\WhatIsHeDoing.Core.*.nupkg | Sort-Object -Descending Name)[0].FullName
-
-    nuget push $recentPackage -ApiKey $env:ApiKey -Source https://www.nuget.org/api/v2/package
+artifacts:
+  - path: 'WhatIsHeDoing.Core\bin\Release\WhatIsHeDoing.Core.*.nupkg'
+    name: WhatIsHeDoing.Core NuGet package
+    type: NuGetPackage
+deploy:
+  provider: NuGet
+  api_key:
+    secure: 0vvD9xkaKen4fUz/3PIi0hbKx6Nyggnvlv8/EOyMtzG/t9T4h/3pdJQJQGa9Tf1z
+  skip_symbols: false
+  artifact: /.*\.nupkg/

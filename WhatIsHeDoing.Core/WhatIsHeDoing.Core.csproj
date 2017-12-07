@@ -1,22 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net452;net462</TargetFrameworks>
     <PackageId>WhatIsHeDoing.Core</PackageId>
-    <PackageVersion>1.4.0</PackageVersion>
+    <PackageVersion>1.5.0</PackageVersion>
     <Authors>WhatIsHeDoing</Authors>
-    <Description>A library of extensions to core .NET functionality.</Description>
+    <Description>Adding support for .NET 4.6.2</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>Adding many more extension methods.</PackageReleaseNotes>
     <Copyright></Copyright>
     <PackageTags>core extensions</PackageTags>
     <PackageLicenseUrl>https://unlicense.org/</PackageLicenseUrl>
-    <PackageProjectUrl>https://bitbucket.org/WhatIsHeDoing/whatishedoing.core</PackageProjectUrl>
-    <Version>1.4.0</Version>
+    <PackageProjectUrl>https://github.com/WhatIsHeDoing/WhatIsHeDoing.Core</PackageProjectUrl>
+    <Version>1.5.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>1.4.0.0</AssemblyVersion>
-    <FileVersion>1.4.0.0</FileVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+    <FileVersion>1.5.0.0</FileVersion>
     <Company />
-    <RepositoryUrl>https://bitbucket.org/WhatIsHeDoing/whatishedoing.core</RepositoryUrl>
+    <RepositoryUrl>https://github.com/WhatIsHeDoing/WhatIsHeDoing.Core</RepositoryUrl>
+    <PackageIconUrl>https://darren.hickling.is/favicon/favicon-60x60.png</PackageIconUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
