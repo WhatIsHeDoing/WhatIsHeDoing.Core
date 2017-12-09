@@ -1,20 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net452;net462</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net452;net462;net471</TargetFrameworks>
     <PackageId>WhatIsHeDoing.Core</PackageId>
-    <PackageVersion>1.5.0</PackageVersion>
+    <PackageVersion>1.6.0</PackageVersion>
     <Authors>WhatIsHeDoing</Authors>
-    <Description>Adding support for .NET 4.6.2</Description>
+    <Description>A library of extensions to core .NET functionality.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Adding many more extension methods.</PackageReleaseNotes>
+    <PackageReleaseNotes>* Adding support for .NET 4.7.1
+* Improving README and adding CONTRIBUTING
+* Bumping the version to 1.6.0</PackageReleaseNotes>
     <Copyright></Copyright>
     <PackageTags>core extensions</PackageTags>
     <PackageLicenseUrl>https://unlicense.org/</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/WhatIsHeDoing/WhatIsHeDoing.Core</PackageProjectUrl>
-    <Version>1.5.0</Version>
+    <Version>1.6.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>1.5.0.0</AssemblyVersion>
-    <FileVersion>1.5.0.0</FileVersion>
     <Company />
     <RepositoryUrl>https://github.com/WhatIsHeDoing/WhatIsHeDoing.Core</RepositoryUrl>
     <PackageIconUrl>https://darren.hickling.is/favicon/favicon-60x60.png</PackageIconUrl>

@@ -33,7 +33,7 @@ namespace WhatIsHeDoing.Core.Extensions
 
         /// <summary>
         /// Flattens a collection of collections of unequal lengths
-        /// by calling <see cref="ZipJagged">ZipJagged</see> and flattens them.
+        /// after calling <see cref="ZipJagged">ZipJagged</see>.
         /// </summary>
         /// <typeparam name="T">Enumerated type</typeparam>
         /// <param name="me">The collection with which to zip</param>
