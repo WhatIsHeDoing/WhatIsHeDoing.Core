@@ -4,6 +4,7 @@
 [![NuGet](https://img.shields.io/nuget/dt/WhatIsHeDoing.Core.svg)](https://www.nuget.org/packages/WhatIsHeDoing.Core/)
 [![Build status](https://ci.appveyor.com/api/projects/status/xshdrvqh387kqioe?svg=true)](https://ci.appveyor.com/project/DarrenHickling/whatishedoing-core-e1tc9)
 [![Tests passing](https://img.shields.io/appveyor/tests/DarrenHickling/whatishedoing-core-e1tc9.svg)](https://ci.appveyor.com/project/DarrenHickling/whatishedoing-core-e1tc9)
+[![codecov](https://codecov.io/gh/WhatIsHeDoing/WhatIsHeDoing.Core/branch/master/graph/badge.svg)](https://codecov.io/gh/WhatIsHeDoing/WhatIsHeDoing.Core)
 [![Dependency Status](https://dependencyci.com/github/WhatIsHeDoing/WhatIsHeDoing.Core/badge)](https://dependencyci.com/github/WhatIsHeDoing/WhatIsHeDoing.Core)
 [![Beerpay](https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core/badge.svg?style=flat)](https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core)
 

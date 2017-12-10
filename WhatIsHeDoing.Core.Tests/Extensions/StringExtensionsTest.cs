@@ -86,6 +86,9 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
                 var expected = new byte[] { 5, 1 };
                 Assert.Equal(expected, actual);
             }
+
+            [Fact]
+            public void Fail() => Assert.Throws<ArgumentNullException>(() => "".ToBytes());
         }
 
         public class TryParse
