@@ -18,6 +18,10 @@ of those functions slowly grows. Rather than having disparate collections of the
 to group them under the `WhatIsHeDoing.Core` namespace, complete with unit tests in the `WhatIsHeDoing.Core.Tests`
 project.
 
+## Live Demo
+
+Take a look at the editable code examples at [.NET Fiddle][dotnetfiddle].
+
 ## Usage
 
 ### Installing
@@ -92,6 +96,7 @@ Thank you.
 [![Beerpay](https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core/badge.svg?style=beer-square)](https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core)
 
 [contributing]: CONTRIBUTING.md
+[dotnetfiddle]: https://dotnetfiddle.net/xXbTcX "C# Online Compiler | .NET Fiddle"
 [humanizr]: http://humanizr.net/
 [nodatime]: https://nodatime.org/
 [nuget]: https://www.nuget.org/packages/WhatIsHeDoing.Core/
