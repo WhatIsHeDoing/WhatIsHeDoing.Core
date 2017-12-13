@@ -1,9 +1,9 @@
-using System;
-using WhatIsHeDoing.Core.Extensions;
-using Xunit;
-
 namespace WhatIsHeDoing.Core.Tests.Extensions
 {
+    using System;
+    using WhatIsHeDoing.Core.Extensions;
+    using Xunit;
+
     public static class StringExtensionsTest
     {
         public class AsCurrency
@@ -63,8 +63,8 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
             }
 
             [Fact]
-            public void Invalid() => Assert.Throws<TypeLoadException>
-                (() => "123".Parse<string>());
+            public void Invalid() =>
+                Assert.Throws<TypeLoadException>(() => "123".Parse<string>());
         }
 
         public class ToBytes
@@ -88,7 +88,7 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
             }
 
             [Fact]
-            public void Fail() => Assert.Throws<ArgumentNullException>(() => "".ToBytes());
+            public void Fail() => Assert.Throws<ArgumentNullException>(() => string.Empty.ToBytes());
         }
 
         public class TryParse

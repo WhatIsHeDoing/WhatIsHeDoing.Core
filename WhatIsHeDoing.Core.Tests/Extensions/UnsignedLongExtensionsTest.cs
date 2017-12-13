@@ -1,8 +1,8 @@
-using WhatIsHeDoing.Core.Extensions;
-using Xunit;
-
 namespace WhatIsHeDoing.Core.Tests.Extensions
-{    
+{
+    using WhatIsHeDoing.Core.Extensions;
+    using Xunit;
+
     public static class UnsignedLongExtensionsTest
     {
         public class Length
@@ -26,11 +26,11 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
                 Assert.Equal(0UL, 123UL.StripDigits(4));
                 Assert.Equal(1UL, 123UL.StripDigits(2));
                 Assert.Equal(12UL, 123UL.StripDigits(1));
-                
+
                 var minValue = ulong.MinValue;
                 var minValueStripped = minValue.StripDigits(1);
                 Assert.Equal(minValue, minValueStripped);
-                
+
                 var maxValue = ulong.MaxValue;
                 var maxValueStripped = maxValue.StripDigits(1);
                 Assert.True(maxValueStripped < maxValue);

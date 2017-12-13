@@ -1,7 +1,7 @@
-using System;
-
 namespace WhatIsHeDoing.Core.Extensions
 {
+    using System;
+
     /// <summary>
     /// Provides extension methods for the unsigned long value type.
     /// </summary>

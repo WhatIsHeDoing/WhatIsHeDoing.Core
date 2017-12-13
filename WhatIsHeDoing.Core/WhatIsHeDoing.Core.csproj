@@ -23,11 +23,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
+    <CodeAnalysisRuleSet>..\WhatIsHeDoing.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
+    <CodeAnalysisRuleSet>..\WhatIsHeDoing.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
@@ -41,6 +43,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Condition="!Exists('C:\Program Files\dotnet\sdk\2.0.3\Roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll')" Include="Microsoft.Net.Compilers" Version="2.4.0" />
+    <PackageReference Condition="!Exists('C:\Program Files\dotnet\sdk\2.0.3\Roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll')" Include="Microsoft.Net.Compilers" Version="2.6.0" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" />
   </ItemGroup>
 </Project>

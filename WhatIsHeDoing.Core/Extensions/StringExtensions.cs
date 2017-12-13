@@ -1,9 +1,9 @@
-using System;
-using System.Globalization;
-using System.Linq;
-
 namespace WhatIsHeDoing.Core.Extensions
 {
+    using System;
+    using System.Globalization;
+    using System.Linq;
+
     /// <summary>
     /// Provides extension methods for string.
     /// </summary>
@@ -17,9 +17,12 @@ namespace WhatIsHeDoing.Core.Extensions
         public static string AsCurrency(this string source) =>
             string.IsNullOrWhiteSpace(source)
             ? source
-            : decimal.TryParse(source, NumberStyles.Number,
-                CultureInfo.CurrentCulture, out decimal result)
-                ? result.ToString("N", CultureInfo.CurrentCulture) : source;
+            : decimal.TryParse(
+                source,
+                NumberStyles.Number,
+                CultureInfo.CurrentCulture,
+                out decimal result)
+                    ? result.ToString("N", CultureInfo.CurrentCulture) : source;
 
         /// <summary>
         /// Determines whether this string can be converted
@@ -47,8 +50,8 @@ namespace WhatIsHeDoing.Core.Extensions
                 : throw new TypeLoadException("Cannot find Parse method");
 
         /// <summary>
-        /// Converts a string representation of a byte array - 
-        /// comma-separated values - to an actual byte array.
+        /// Converts a string representation of a byte array
+        /// - comma-separated values - to an actual byte array.
         /// </summary>
         /// <remarks>Leaves the underlying code to throw on error!</remarks>
         /// <param name="source">To convert</param>
@@ -68,11 +71,10 @@ namespace WhatIsHeDoing.Core.Extensions
         /// <param name="value">To parse</param>
         /// <param name="result">Parsed value or default on failure</param>
         /// <returns>Success</returns>
-        public static bool TryParse<TResult>
-            (this string value, out TResult result)
+        public static bool TryParse<TResult>(this string value, out TResult result)
         {
-            var methodInfo = typeof(TResult).GetMethod
-                ("Parse", new Type[] { typeof(string) });
+            var methodInfo = typeof(TResult).GetMethod(
+                "Parse", new Type[] { typeof(string) });
 
             if (methodInfo == null)
             {
@@ -80,7 +82,7 @@ namespace WhatIsHeDoing.Core.Extensions
                 return false;
             }
 
-            result = (TResult) methodInfo.Invoke(null, new object[] { value });
+            result = (TResult)methodInfo.Invoke(null, new object[] { value });
             return true;
         }
     }

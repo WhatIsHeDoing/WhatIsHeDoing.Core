@@ -1,9 +1,9 @@
-using System;
-using WhatIsHeDoing.Core.Extensions;
-using Xunit;
-
 namespace WhatIsHeDoing.Core.Tests.Extensions
-{    
+{
+    using System;
+    using WhatIsHeDoing.Core.Extensions;
+    using Xunit;
+
     public static class LongExtensionsTest
     {
         public class Length
@@ -22,8 +22,8 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
             }
 
             [Fact]
-            public void MinValue() => Assert.Throws<ArgumentOutOfRangeException>
-                (() => LongExtensions.Length(long.MinValue.Length()));
+            public void MinValue() => Assert.Throws<ArgumentOutOfRangeException>(
+                () => LongExtensions.Length(long.MinValue.Length()));
         }
 
         public class StripDigits
@@ -37,10 +37,10 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
                 Assert.Equal(-1, -123L.StripDigits(2));
                 Assert.Equal(-12, -123L.StripDigits(1));
                 Assert.Equal(0, -123L.StripDigits(4));
-                
+
                 var minValue = long.MinValue;
                 Assert.True(minValue.StripDigits(1) > minValue);
-                
+
                 var maxValue = long.MaxValue;
                 Assert.True(maxValue.StripDigits(1) < maxValue);
             }

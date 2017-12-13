@@ -1,7 +1,7 @@
-﻿using System;
-
 namespace WhatIsHeDoing.Core.Extensions
 {
+    using System;
+
     /// <summary>
     /// Provides extension methods for all objects.
     /// </summary>
@@ -17,8 +17,8 @@ namespace WhatIsHeDoing.Core.Extensions
         /// <exception cref="ArgumentNullException">
         /// If either argument is null
         /// </exception>
-        public static T AsFluent<T>
-            (this T @this, Action action)
+        /// <typeparam name="T">Calling object type.</typeparam>
+        public static T AsFluent<T>(this T @this, Action action)
         {
             if (@this == null)
             {

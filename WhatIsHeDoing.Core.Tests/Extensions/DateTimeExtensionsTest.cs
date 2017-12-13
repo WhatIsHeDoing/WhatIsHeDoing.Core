@@ -1,10 +1,10 @@
-using System;
-using System.Linq;
-using WhatIsHeDoing.Core.Extensions;
-using Xunit;
-
 namespace WhatIsHeDoing.Core.Tests.Extensions
 {
+    using System;
+    using System.Linq;
+    using WhatIsHeDoing.Core.Extensions;
+    using Xunit;
+
     public class DateTimeExtensionsTest
     {
         public class GetNextWeekday
@@ -61,13 +61,15 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
                 Assert.NotNull(periodsBetween);
                 Assert.Equal(4, periodsBetween.Count);
 
-                Assert.Equal(new[]
-                {
-                    new DateTime(2010, 1, 1, 0, 0, 0),
-                    new DateTime(2010, 1, 1, 0, 30, 0),
-                    new DateTime(2010, 1, 1, 1, 0, 0),
-                    new DateTime(2010, 1, 1, 1, 30, 0)
-                }, periodsBetween);
+                Assert.Equal(
+                    new[]
+                    {
+                        new DateTime(2010, 1, 1, 0, 0, 0),
+                        new DateTime(2010, 1, 1, 0, 30, 0),
+                        new DateTime(2010, 1, 1, 1, 0, 0),
+                        new DateTime(2010, 1, 1, 1, 30, 0)
+                    },
+                    periodsBetween);
             }
 
             [Fact]

@@ -1,10 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-
 namespace WhatIsHeDoing.Core.Extensions
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
+    using System.Linq;
+
     /// <summary>
     /// Provides extension methods for the IEnumerable interface
     /// </summary>
@@ -20,15 +20,16 @@ namespace WhatIsHeDoing.Core.Extensions
         /// <param name="seed">Initial aggregate</param>
         /// <param name="func">To apply</param>
         /// <returns>Aggregate</returns>
-        public static TAccumulate Aggregate<TSource, TAccumulate>
-            (this IEnumerable<TSource> source, TAccumulate seed,
-                Func<TAccumulate, TSource, int, TAccumulate> func)
+        public static TAccumulate Aggregate<TSource, TAccumulate>(
+            this IEnumerable<TSource> source,
+            TAccumulate seed,
+            Func<TAccumulate, TSource, int, TAccumulate> func)
         {
             var result = seed;
             var index = 0;
 
-            return source.Aggregate(result,
-                (current, element) => func(current, element, index++));
+            return source.Aggregate(
+                result, (current, element) => func(current, element, index++));
         }
 
         /// <summary>
@@ -39,8 +40,8 @@ namespace WhatIsHeDoing.Core.Extensions
         /// <param name="me">The collection with which to zip</param>
         /// <param name="us">The collections to also enumerate with</param>
         /// <returns>A single collection</returns>
-        public static IEnumerable<T> IterateJagged<T>
-            (this IEnumerable<T> me, params IEnumerable<T>[] us)
+        public static IEnumerable<T> IterateJagged<T>(
+            this IEnumerable<T> me, params IEnumerable<T>[] us)
         {
             foreach (var iterator in me.ZipJagged(us))
             {
@@ -84,10 +85,8 @@ namespace WhatIsHeDoing.Core.Extensions
         /// <param name="me">The collection with which to zip</param>
         /// <param name="us">The collections to also enumerate with</param>
         /// <returns>A collection of collections</returns>
-        [SuppressMessage("Microsoft.Design",
-            "CA1006:DoNotNestGenericTypesInMemberSignatures")]
-        public static IEnumerable<IEnumerable<T>> ZipJagged<T>
-            (this IEnumerable<T> me, params IEnumerable<T>[] us)
+        public static IEnumerable<IEnumerable<T>> ZipJagged<T>(
+            this IEnumerable<T> me, params IEnumerable<T>[] us)
         {
             // Join the collections, ignore the null ones
             // and grab their enumerators.

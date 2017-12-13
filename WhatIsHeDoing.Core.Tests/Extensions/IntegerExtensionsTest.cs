@@ -1,8 +1,8 @@
-using WhatIsHeDoing.Core.Extensions;
-using Xunit;
-
 namespace WhatIsHeDoing.Core.Tests.Extensions
-{    
+{
+    using WhatIsHeDoing.Core.Extensions;
+    using Xunit;
+
     public static class IntegerExtensionsTest
     {
         public class ToNearestCeiling

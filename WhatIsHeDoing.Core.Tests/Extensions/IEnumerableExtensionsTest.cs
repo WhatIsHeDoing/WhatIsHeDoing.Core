@@ -1,11 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using WhatIsHeDoing.Core.Extensions;
-using Xunit;
-
 namespace WhatIsHeDoing.Core.Tests.Extensions
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using WhatIsHeDoing.Core.Extensions;
+    using Xunit;
+
     public class IEnumerableExtensionsTest
     {
         public class Aggregate
@@ -15,8 +15,8 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
             {
                 var collection = Enumerable.Range(0, 4);
 
-                var actual = collection.Aggregate
-                    (0, (agg, value, index) => agg + (value * index));
+                var actual = collection.Aggregate(
+                    0, (agg, value, index) => agg + (value * index));
 
                 const int expected = (0 * 0) + (1 * 1) + (2 * 2) + (3 * 3);
                 Assert.Equal(expected, actual);
@@ -58,7 +58,7 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
                 var second = new int[] { 2, 3 };
                 var third = new int[] { 4 };
                 var result = first.IterateJagged(second, third).ToArray();
-                Assert.Equal(new [] { 1, 2, 4, 3 }, result);
+                Assert.Equal(new[] { 1, 2, 4, 3 }, result);
             }
 
             [Fact]
@@ -90,15 +90,15 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
                 var expectedThirdColumn = new List<int> { 9 };
                 var actualThirdColum = actual.Skip(7).Take(1).ToList();
 
-                Assert.Equal(expectedThirdColumn,actualThirdColum);
+                Assert.Equal(expectedThirdColumn, actualThirdColum);
             }
         }
 
         public class Randomise
         {
             [Fact]
-            public void ThrowsForNull() => Assert.Throws<ArgumentNullException>
-                (() => IEnumerableExtensions.Randomise<IEnumerable<int>>(null));
+            public void ThrowsForNull() => Assert.Throws<ArgumentNullException>(
+                () => IEnumerableExtensions.Randomise<IEnumerable<int>>(null));
 
             [Fact]
             public void Randomises()
@@ -126,8 +126,8 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
             }
 
             [Fact]
-            public void ThrowsForNull() => Assert.Throws<ArgumentNullException>
-                (() => IEnumerableExtensions.WhereNotNull<List<int>>(null));
+            public void ThrowsForNull() => Assert.Throws<ArgumentNullException>(
+                () => IEnumerableExtensions.WhereNotNull<List<int>>(null));
         }
 
         public class ZipJagged
