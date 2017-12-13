@@ -7,6 +7,7 @@
 [![codecov](https://codecov.io/gh/WhatIsHeDoing/WhatIsHeDoing.Core/branch/master/graph/badge.svg)](https://codecov.io/gh/WhatIsHeDoing/WhatIsHeDoing.Core)
 [![Dependency Status](https://dependencyci.com/github/WhatIsHeDoing/WhatIsHeDoing.Core/badge)](https://dependencyci.com/github/WhatIsHeDoing/WhatIsHeDoing.Core)
 [![Beerpay](https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core/badge.svg?style=flat)](https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core)
+[![Codenvy badge](https://codenvy.io/factory/resources/codenvy-contribute.svg)](https://codenvy.io/f?name=nuget&user=whatishedoing 'Start development on Codenvy')
 
 A library of extensions to core .NET functionality.
 
@@ -82,7 +83,12 @@ times, timespans, numbers and quantities.
 
 ## Contributing
 
-All contributions are greatly welcomed! Please see the [guidelines][contributing].
+All contributions are greatly welcomed! Please see the [guidelines][contributing] for more information.
+
+If you are developing locally, pull down this repo and build within Visual Studio (any edition), or
+run `dotnet test` on any platform. Alternatively, simply create a new Codenvy workspace from my [factory][codenvy]!
+
+![Codenvy workspace](Codenvy-WhatIsHeDoing-NuGet.png)
 
 ## Authors
 
@@ -95,6 +101,7 @@ Thank you.
 
 [![Beerpay](https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core/badge.svg?style=beer-square)](https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core)
 
+[codenvy]: https://codenvy.io/f?name=nuget&user=whatishedoing
 [contributing]: CONTRIBUTING.md
 [dotnetfiddle]: https://dotnetfiddle.net/xXbTcX "C# Online Compiler | .NET Fiddle"
 [humanizr]: http://humanizr.net/
