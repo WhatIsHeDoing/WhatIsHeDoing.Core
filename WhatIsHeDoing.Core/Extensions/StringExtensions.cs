@@ -22,7 +22,7 @@ namespace WhatIsHeDoing.Core.Extensions
                 NumberStyles.Number,
                 CultureInfo.CurrentCulture,
                 out decimal result)
-                    ? result.ToString("N", CultureInfo.CurrentCulture) : source;
+                    ? Math.Round(result, 2).ToString() : source;
 
         /// <summary>
         /// Determines whether this string can be converted
