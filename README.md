@@ -1,13 +1,14 @@
 # WhatIsHeDoing.Core
 
-[![NuGet](https://img.shields.io/nuget/v/WhatIsHeDoing.Core.svg)](https://www.nuget.org/packages/WhatIsHeDoing.Core/)
-[![NuGet](https://img.shields.io/nuget/dt/WhatIsHeDoing.Core.svg)](https://www.nuget.org/packages/WhatIsHeDoing.Core/)
-[![Build status](https://ci.appveyor.com/api/projects/status/xshdrvqh387kqioe?svg=true)](https://ci.appveyor.com/project/DarrenHickling/whatishedoing-core-e1tc9)
-[![Tests passing](https://img.shields.io/appveyor/tests/DarrenHickling/whatishedoing-core-e1tc9.svg)](https://ci.appveyor.com/project/DarrenHickling/whatishedoing-core-e1tc9)
-[![codecov](https://codecov.io/gh/WhatIsHeDoing/WhatIsHeDoing.Core/branch/master/graph/badge.svg)](https://codecov.io/gh/WhatIsHeDoing/WhatIsHeDoing.Core)
-[![Dependency Status](https://dependencyci.com/github/WhatIsHeDoing/WhatIsHeDoing.Core/badge)](https://dependencyci.com/github/WhatIsHeDoing/WhatIsHeDoing.Core)
-[![Beerpay](https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core/badge.svg?style=flat)](https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core)
-[![Codenvy badge](https://codenvy.io/factory/resources/codenvy-contribute.svg)](https://codenvy.io/f?name=nuget&user=whatishedoing 'Start development on Codenvy')
+[![NuGet package](https://img.shields.io/nuget/v/WhatIsHeDoing.Core.svg)](https://www.nuget.org/packages/WhatIsHeDoing.Core/ 'NuGet package')
+[![NuGet downloads](https://img.shields.io/nuget/dt/WhatIsHeDoing.Core.svg)](https://www.nuget.org/packages/WhatIsHeDoing.Core/ 'NuGet downloads')
+[![AppVeyor Windows build status](https://ci.appveyor.com/api/projects/status/xshdrvqh387kqioe?svg=true)][appveyor]
+[![Test status](https://img.shields.io/appveyor/tests/DarrenHickling/whatishedoing-core-e1tc9.svg)](https://ci.appveyor.com/project/DarrenHickling/whatishedoing-core-e1tc9 'Test status')
+[![Codecov code coverage](https://codecov.io/gh/WhatIsHeDoing/WhatIsHeDoing.Core/branch/master/graph/badge.svg)](https://codecov.io/gh/WhatIsHeDoing/WhatIsHeDoing.Core 'Codecov code coverage')
+[![Travis CI Linux build status](https://travis-ci.org/WhatIsHeDoing/WhatIsHeDoing.Core.svg)][travis]
+[![Dependency status](https://dependencyci.com/github/WhatIsHeDoing/WhatIsHeDoing.Core/badge)](https://dependencyci.com/github/WhatIsHeDoing/WhatIsHeDoing.Core 'Dependency status')
+[![Beerpay](https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core/badge.svg?style=flat)][beerpay]
+[![Codenvy badge](https://codenvy.io/factory/resources/codenvy-contribute.svg)][codenvy]
 
 A library of extensions to core .NET functionality.
 
@@ -86,7 +87,8 @@ times, timespans, numbers and quantities.
 All contributions are greatly welcomed! Please see the [guidelines][contributing] for more information.
 
 If you are developing locally, pull down this repo and build within Visual Studio (any edition), or
-run `dotnet test` on any platform. Alternatively, simply create a new Codenvy workspace from my [factory][codenvy]!
+run `dotnet test` on any platform; the `master` branch is continuously built on both [Windows][appveyor]
+and [Linux][travis]. Alternatively, simply create a new Codenvy workspace from my [factory][codenvy]!
 
 ![Codenvy workspace](Codenvy-WhatIsHeDoing-NuGet.png)
 
@@ -99,13 +101,18 @@ run `dotnet test` on any platform. Alternatively, simply create a new Codenvy wo
 I'm a huge fan of craft :beers:, so feel free to contribute to more that I can rate on [Untappd][untappd].
 Thank you.
 
-[![Beerpay](https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core/badge.svg?style=beer-square)](https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core)
+[![Beerpay](https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core/badge.svg?style=beer-square)][beerpay]
 
-[codenvy]: https://codenvy.io/f?name=nuget&user=whatishedoing
+[appveyor]: https://ci.appveyor.com/project/DarrenHickling/whatishedoing-core-e1tc9
+    "WhatIsHeDoing.Core - AppVeyor [Windows build]"
+[beerpay]: https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core
+[codenvy]: https://codenvy.io/f?name=nuget&user=whatishedoing "Start development on Codenvy"
 [contributing]: CONTRIBUTING.md
 [dotnetfiddle]: https://dotnetfiddle.net/xXbTcX "C# Online Compiler | .NET Fiddle"
 [humanizr]: http://humanizr.net/
 [nodatime]: https://nodatime.org/
 [nuget]: https://www.nuget.org/packages/WhatIsHeDoing.Core/
+[travis]: https://travis-ci.org/WhatIsHeDoing/WhatIsHeDoing.Core
+    "WhatIsHeDoing/WhatIsHeDoing.Core - Travis CI [Linux build]"
 [untappd]: https://untappd.com/user/WhatIsHeDoing
 [whatisdazdoing]: https://twitter.com/WhatIsDazDoing "Darren Hickling (@WhatIsDazDoing) | Twitter"

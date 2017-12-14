@@ -3,18 +3,16 @@
     <TargetFrameworks Condition="'$(OS)' != 'Windows_NT'">netstandard2.0;</TargetFrameworks>
     <TargetFrameworks Condition="'$(OS)' == 'Windows_NT'">netstandard2.0;net452;net462;net471</TargetFrameworks>
     <PackageId>WhatIsHeDoing.Core</PackageId>
-    <PackageVersion>1.6.0</PackageVersion>
+    <PackageVersion>1.6.1</PackageVersion>
     <Authors>WhatIsHeDoing</Authors>
     <Description>A library of extensions to core .NET functionality.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>* Adding support for .NET 4.7.1
-* Improving README and adding CONTRIBUTING
-* Bumping the version to 1.6.0</PackageReleaseNotes>
+    <PackageReleaseNotes>Adding Linux build support and fixing currency issue on Linux .NET Core</PackageReleaseNotes>
     <Copyright></Copyright>
     <PackageTags>core extensions</PackageTags>
     <PackageLicenseUrl>https://unlicense.org/</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/WhatIsHeDoing/WhatIsHeDoing.Core</PackageProjectUrl>
-    <Version>1.6.0</Version>
+    <Version>1.6.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Company />
     <RepositoryUrl>https://github.com/WhatIsHeDoing/WhatIsHeDoing.Core</RepositoryUrl>
