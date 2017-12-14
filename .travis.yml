@@ -6,4 +6,4 @@ install:
   - dotnet restore
 script:
   - dotnet build --configuration Release
-  - dotnet test
+  - dotnet test WhatIsHeDoing.Core.Tests/WhatIsHeDoing.Core.Tests.csproj
