@@ -34,6 +34,7 @@
     <PackageReference Include="Desktop.Analyzers" Version="1.1.0" />
     <PackageReference Condition="'$(OS)' == 'Windows_NT'" Include="Microsoft.Net.Compilers" Version="2.6.1" />
     <PackageReference Include="RoslynSecurityGuard" Version="2.3.0" />
+    <PackageReference Include="SafeNuGet" Version="1.0.10" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" />
   </ItemGroup>
 </Project>
