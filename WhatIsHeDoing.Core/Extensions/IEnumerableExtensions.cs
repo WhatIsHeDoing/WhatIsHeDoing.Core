@@ -2,8 +2,8 @@ namespace WhatIsHeDoing.Core.Extensions
 {
     using System;
     using System.Collections.Generic;
-    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
+    using System.Security.Cryptography;
 
     /// <summary>
     /// Provides extension methods for the IEnumerable interface
@@ -63,7 +63,7 @@ namespace WhatIsHeDoing.Core.Extensions
         /// </exception>
         public static IEnumerable<T> Randomise<T>(this IEnumerable<T> source) =>
             source != null
-            ? source.OrderBy(e => new Random(Guid.NewGuid().GetHashCode()).Next())
+            ? source.OrderBy(e => RandomNumberGenerator.Create().GetHashCode())
             : throw new ArgumentNullException(nameof(source));
 
         /// <summary>
