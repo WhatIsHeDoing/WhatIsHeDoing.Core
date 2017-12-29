@@ -13,6 +13,7 @@ build_script:
 after_build:
 - npm install snyk -g
 - snyk auth %SNYK_KEY%
+- cd WhatIsHeDoing.Core
 - snyk test
 - snyk monitor
 test_script:
