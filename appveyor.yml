@@ -11,7 +11,7 @@ build_script:
 - dotnet restore
 - dotnet build --configuration Release
 after_build:
-- npm install snyk -g
+- npm install lodash snyk -g
 - snyk auth %SNYK_KEY%
 - cd WhatIsHeDoing.Core
 - snyk test
