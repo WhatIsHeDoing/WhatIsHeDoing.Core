@@ -6,7 +6,6 @@
 [![Test status](https://img.shields.io/appveyor/tests/DarrenHickling/whatishedoing-core-e1tc9.svg)](https://ci.appveyor.com/project/DarrenHickling/whatishedoing-core-e1tc9 'Test status')
 [![Codecov code coverage](https://codecov.io/gh/WhatIsHeDoing/WhatIsHeDoing.Core/branch/master/graph/badge.svg)](https://codecov.io/gh/WhatIsHeDoing/WhatIsHeDoing.Core 'Codecov code coverage')
 [![Travis CI Linux build status](https://travis-ci.org/WhatIsHeDoing/WhatIsHeDoing.Core.svg)][travis]
-[![Dependency status](https://dependencyci.com/github/WhatIsHeDoing/WhatIsHeDoing.Core/badge)](https://dependencyci.com/github/WhatIsHeDoing/WhatIsHeDoing.Core 'Dependency status')
 [![Beerpay](https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core/badge.svg?style=flat)][beerpay]
 [![Codenvy badge](https://codenvy.io/factory/resources/codenvy-contribute.svg)][codenvy]
 
