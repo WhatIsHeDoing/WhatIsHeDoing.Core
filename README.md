@@ -3,10 +3,8 @@
 [![NuGet package](https://img.shields.io/nuget/v/WhatIsHeDoing.Core.svg)](https://www.nuget.org/packages/WhatIsHeDoing.Core/ 'NuGet package')
 [![NuGet downloads](https://img.shields.io/nuget/dt/WhatIsHeDoing.Core.svg)](https://www.nuget.org/packages/WhatIsHeDoing.Core/ 'NuGet downloads')
 [![AppVeyor Windows build status](https://ci.appveyor.com/api/projects/status/xshdrvqh387kqioe?svg=true)][appveyor]
-[![Test status](https://img.shields.io/appveyor/tests/DarrenHickling/whatishedoing-core-e1tc9.svg)](https://ci.appveyor.com/project/DarrenHickling/whatishedoing-core-e1tc9 'Test status')
 [![Codecov code coverage](https://codecov.io/gh/WhatIsHeDoing/WhatIsHeDoing.Core/branch/master/graph/badge.svg)](https://codecov.io/gh/WhatIsHeDoing/WhatIsHeDoing.Core 'Codecov code coverage')
 [![Travis CI Linux build status](https://travis-ci.org/WhatIsHeDoing/WhatIsHeDoing.Core.svg)][travis]
-[![Beerpay](https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core/badge.svg?style=flat)][beerpay]
 [![Codenvy badge](https://codenvy.io/factory/resources/codenvy-contribute.svg)][codenvy]
 
 A library of extensions to core .NET functionality.
@@ -21,13 +19,13 @@ project.
 
 ## Live Demo
 
-Take a look at the editable code examples at [.NET Fiddle][dotnetfiddle].
+Take a look at the editable code examples at [.NET Fiddle].
 
 ## Usage
 
 ### Installing
 
-This package is available via [NuGet][nuget], and targets multiple .NET platforms.
+This package is available via [NuGet], and targets multiple .NET platforms.
 
 ### Methods
 
@@ -77,9 +75,9 @@ members of object.
 
 Missing something? Have you tried these excellent projects?
 
-* [Humanizr][humanizr]: Humanizer meets all your .NET needs for manipulating and displaying strings, enums, dates,
+* [Humanizr]: Humanizer meets all your .NET needs for manipulating and displaying strings, enums, dates,
 times, timespans, numbers and quantities.
-* [NodaTime][nodatime]: A better date and time API for .NET.
+* [NodaTime]: A better date and time API for .NET.
 
 ## Contributing
 
@@ -93,25 +91,16 @@ and [Linux][travis]. Alternatively, simply create a new Codenvy workspace from m
 
 ## Authors
 
-* **Darren Hickling**: https://darren.hickling.is/, [@WhatIsDazDoing][whatisdazdoing]
+* **Darren Hickling**: https://darrenhickling.com/, [@DarrenHickling]
 
-## And Finally...
-
-I'm a huge fan of craft :beers:, so feel free to contribute to more that I can rate on [Untappd][untappd].
-Thank you.
-
-[![Beerpay](https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core/badge.svg?style=beer-square)][beerpay]
-
+[.NET Fiddle]: https://dotnetfiddle.net/xXbTcX "C# Online Compiler | .NET Fiddle"
+[@DarrenHickling]: https://twitter.com/DarrenHickling "Darren Hickling (@DarrenHickling) | Twitter"
 [appveyor]: https://ci.appveyor.com/project/DarrenHickling/whatishedoing-core-e1tc9
     "WhatIsHeDoing.Core - AppVeyor [Windows build]"
-[beerpay]: https://beerpay.io/WhatIsHeDoing/WhatIsHeDoing.Core
-[codenvy]: https://codenvy.io/f?name=nuget&user=whatishedoing "Start development on Codenvy"
+[codenvy]: https://codenvy.io/f?id=factorynedmx40ex1ue8pdj "Start development on Codenvy"
 [contributing]: CONTRIBUTING.md
-[dotnetfiddle]: https://dotnetfiddle.net/xXbTcX "C# Online Compiler | .NET Fiddle"
-[humanizr]: http://humanizr.net/
-[nodatime]: https://nodatime.org/
-[nuget]: https://www.nuget.org/packages/WhatIsHeDoing.Core/
+[Humanizr]: http://humanizr.net/
+[NodaTime]: https://nodatime.org/
+[Nuget]: https://www.nuget.org/packages/WhatIsHeDoing.Core/
 [travis]: https://travis-ci.org/WhatIsHeDoing/WhatIsHeDoing.Core
     "WhatIsHeDoing/WhatIsHeDoing.Core - Travis CI [Linux build]"
-[untappd]: https://untappd.com/user/WhatIsHeDoing
-[whatisdazdoing]: https://twitter.com/WhatIsDazDoing "Darren Hickling (@WhatIsDazDoing) | Twitter"
