@@ -1,4 +1,6 @@
 {
     "editor.formatOnSave": true,
-    "dotnet-test-explorer.testProjectPath": "WhatIsHeDoing.Core.Tests"
+    "dotnet-test-explorer.testProjectPath": "WhatIsHeDoing.Core.Tests",
+    "omnisharp.autoStart": true,
+    "omnisharp.enableRoslynAnalyzers": true
 }
