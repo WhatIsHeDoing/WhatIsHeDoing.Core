@@ -1,21 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp2.2</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     <PackageId>WhatIsHeDoing.Core</PackageId>
-    <PackageVersion>2.0.0</PackageVersion>
+    <PackageVersion>3.0.0</PackageVersion>
     <Authors>WhatIsHeDoing</Authors>
     <Description>A library of extensions to core .NET functionality.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Adding Linux build support and fixing currency issue on Linux .NET Core</PackageReleaseNotes>
+    <PackageReleaseNotes>Moving to .NET Core 3.1</PackageReleaseNotes>
     <Copyright></Copyright>
     <PackageTags>core extensions</PackageTags>
     <PackageLicenseExpression>Unlicense</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/WhatIsHeDoing/WhatIsHeDoing.Core</PackageProjectUrl>
-    <Version>2.0.0</Version>
+    <Version>3.0.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Company />
     <RepositoryUrl>https://github.com/WhatIsHeDoing/WhatIsHeDoing.Core</RepositoryUrl>
-    <PackageIconUrl>https://darren.hickling.is/favicon/favicon-60x60.png</PackageIconUrl>
+    <IconUrl>https://darrenhickling.com/favicon/favicon-60x60.png</IconUrl>
   </PropertyGroup>
 
   <PropertyGroup>

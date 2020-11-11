@@ -1,15 +1,15 @@
 # WhatIsHeDoing.Core
 
-[![NuGet package](https://img.shields.io/nuget/v/WhatIsHeDoing.Core.svg)](https://www.nuget.org/packages/WhatIsHeDoing.Core/ 'NuGet package')
-[![NuGet downloads](https://img.shields.io/nuget/dt/WhatIsHeDoing.Core.svg)](https://www.nuget.org/packages/WhatIsHeDoing.Core/ 'NuGet downloads')
-[![AppVeyor Windows build status](https://ci.appveyor.com/api/projects/status/xshdrvqh387kqioe?svg=true)][appveyor]
+[![NuGet package](https://img.shields.io/NuGet/v/WhatIsHeDoing.Core.svg)](https://www.NuGet.org/packages/WhatIsHeDoing.Core/ 'NuGet package')
+[![NuGet downloads](https://img.shields.io/NuGet/dt/WhatIsHeDoing.Core.svg)](https://www.NuGet.org/packages/WhatIsHeDoing.Core/ 'NuGet downloads')
+[![AppVeyor Windows build status](https://ci.AppVeyor.com/api/projects/status/xshdrvqh387kqioe?svg=true)][AppVeyor]
 [![Codecov code coverage](https://codecov.io/gh/WhatIsHeDoing/WhatIsHeDoing.Core/branch/master/graph/badge.svg)](https://codecov.io/gh/WhatIsHeDoing/WhatIsHeDoing.Core 'Codecov code coverage')
-[![Travis CI Linux build status](https://travis-ci.org/WhatIsHeDoing/WhatIsHeDoing.Core.svg)][travis]
-[![Codenvy badge](https://codenvy.io/factory/resources/codenvy-contribute.svg)][codenvy]
+[![Travis CI Linux build status](https://Travis-ci.org/WhatIsHeDoing/WhatIsHeDoing.Core.svg)][Travis]
+[![Codenvy badge](https://Codenvy.io/factory/resources/Codenvy-contribute.svg)][Codenvy]
 
 A library of extensions to core .NET functionality.
 
-## Introduction
+## 👋 Introduction
 
 The core .NET libraries - those that are available on most .NET runtime versions and environments -
 are very feature-rich. However, there are times when you need a little helper function, and the list
@@ -17,15 +17,15 @@ of those functions slowly grows. Rather than having disparate collections of the
 to group them under the `WhatIsHeDoing.Core` namespace, complete with unit tests in the `WhatIsHeDoing.Core.Tests`
 project.
 
-## Live Demo
+## 📡 Live Demo
 
 Take a look at the editable code examples at [.NET Fiddle].
 
-## Usage
+## 🦮 Usage
 
 ### Installing
 
-This package is available via [NuGet], and targets multiple .NET platforms.
+This package is available via [NuGet].
 
 ### Methods
 
@@ -71,7 +71,7 @@ members of object.
 * `Length`: Determines the length of a number.
 * `StripDigits`: Strips a specified number of digits from a number.
 
-## Other Projects
+## ⭐ Other Projects
 
 Missing something? Have you tried these excellent projects?
 
@@ -79,28 +79,27 @@ Missing something? Have you tried these excellent projects?
 times, timespans, numbers and quantities.
 * [NodaTime]: A better date and time API for .NET.
 
-## Contributing
+## 🆘 Contributing
 
 All contributions are greatly welcomed! Please see the [guidelines][contributing] for more information.
 
 If you are developing locally, pull down this repo and build within Visual Studio (any edition), or
-run `dotnet test` on any platform; the `master` branch is continuously built on both [Windows][appveyor]
-and [Linux][travis]. Alternatively, simply create a new Codenvy workspace from my [factory][codenvy]!
+run `dotnet test` on any platform; the `master` branch is continuously built on both [Windows][AppVeyor]
+and [Linux][Travis]. Alternatively, simply create a new Codenvy workspace from my [factory][Codenvy]!
 
 ![Codenvy workspace](Codenvy-WhatIsHeDoing-NuGet.png)
 
-## Authors
+## 👱 Authors
 
-* **Darren Hickling**: https://darrenhickling.com/, [@DarrenHickling]
+* **Darren Hickling**: <https://darrenhickling.com/>
 
 [.NET Fiddle]: https://dotnetfiddle.net/xXbTcX "C# Online Compiler | .NET Fiddle"
-[@DarrenHickling]: https://twitter.com/DarrenHickling "Darren Hickling (@DarrenHickling) | Twitter"
-[appveyor]: https://ci.appveyor.com/project/DarrenHickling/whatishedoing-core-e1tc9
+[AppVeyor]: https://ci.AppVeyor.com/project/DarrenHickling/whatishedoing-core-e1tc9
     "WhatIsHeDoing.Core - AppVeyor [Windows build]"
-[codenvy]: https://codenvy.io/f?id=factorynedmx40ex1ue8pdj "Start development on Codenvy"
+[Codenvy]: https://Codenvy.io/f?id=factorynedmx40ex1ue8pdj "Start development on Codenvy"
 [contributing]: CONTRIBUTING.md
 [Humanizr]: http://humanizr.net/
 [NodaTime]: https://nodatime.org/
-[Nuget]: https://www.nuget.org/packages/WhatIsHeDoing.Core/
-[travis]: https://travis-ci.org/WhatIsHeDoing/WhatIsHeDoing.Core
+[NuGet]: https://www.NuGet.org/packages/WhatIsHeDoing.Core/
+[Travis]: https://Travis-ci.org/WhatIsHeDoing/WhatIsHeDoing.Core
     "WhatIsHeDoing/WhatIsHeDoing.Core - Travis CI [Linux build]"
