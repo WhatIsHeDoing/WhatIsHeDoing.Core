@@ -1,11 +1,11 @@
 # WhatIsHeDoing.Core
 
-[![NuGet package](https://img.shields.io/NuGet/v/WhatIsHeDoing.Core.svg)](https://www.NuGet.org/packages/WhatIsHeDoing.Core/ 'NuGet package')
-[![NuGet downloads](https://img.shields.io/NuGet/dt/WhatIsHeDoing.Core.svg)](https://www.NuGet.org/packages/WhatIsHeDoing.Core/ 'NuGet downloads')
+[![NuGet package](https://img.shields.io/nuget/v/WhatIsHeDoing.Core.svg)](https://www.NuGet.org/packages/WhatIsHeDoing.Core/ 'NuGet package')
+[![NuGet downloads](https://img.shields.io/nuget/dt/WhatIsHeDoing.Core.svg)](https://www.NuGet.org/packages/WhatIsHeDoing.Core/ 'NuGet downloads')
 [![AppVeyor Windows build status](https://ci.AppVeyor.com/api/projects/status/xshdrvqh387kqioe?svg=true)][AppVeyor]
 [![Codecov code coverage](https://codecov.io/gh/WhatIsHeDoing/WhatIsHeDoing.Core/branch/live/graph/badge.svg)](https://codecov.io/gh/WhatIsHeDoing/WhatIsHeDoing.Core 'Codecov code coverage')
 [![Travis CI Linux build status](https://Travis-ci.org/WhatIsHeDoing/WhatIsHeDoing.Core.svg)][Travis]
-[![Codenvy badge](https://Codenvy.io/factory/resources/Codenvy-contribute.svg)][Codenvy]
+[![Codenvy badge](https://codenvy.io/factory/resources/codenvy-contribute.svg)][Codenvy]
 
 A library of extensions to core .NET functionality.
 
@@ -85,7 +85,7 @@ All contributions are greatly welcomed! Please see the [guidelines][contributing
 
 If you are developing locally, pull down this repo and build within Visual Studio (any edition), or
 run `dotnet test` on any platform; the `live` branch is continuously built on both [Windows][AppVeyor]
-and [Linux][Travis]. Alternatively, simply create a new Codenvy workspace from my [factory][Codenvy]!
+and [Linux][Travis]. Alternatively, create a new Codenvy workspace from my [factory][Codenvy]!
 
 ![Codenvy workspace](Codenvy-WhatIsHeDoing-NuGet.png)
 
