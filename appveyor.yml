@@ -2,12 +2,12 @@ version: 1.0.{build}
 image: Visual Studio 2019
 platform: Any CPU
 before_build:
-- choco install codecov opencover.portable
+- choco install codecov nuget opencover.portable
 build_script:
 - dotnet restore
 - dotnet build --configuration Release
 test_script:
-- OpenCover.Console.exe -register:user -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:test -filter:"+[WhatIsHeDoing.Core]* -[WhatIsHeDoing.Core.Tests]*" -output:coverage.xml -oldstyle
+- OpenCover.Console.exe -register:user -target:"%xunit20%\xunit.console.x86.exe" -targetargs:test -filter:"+[WhatIsHeDoing.Core]* -[WhatIsHeDoing.Core.Tests]*" -output:coverage.xml
 - codecov -f coverage.xml
 artifacts:
   - path: 'WhatIsHeDoing.Core\bin\Release\WhatIsHeDoing.Core.*.nupkg'
@@ -16,6 +16,6 @@ artifacts:
 deploy:
   provider: NuGet
   api_key:
-    secure: GzI+541WvJLQ2V51SlkZ56jPtn1DZlFzRc42Dx1S030AZLPfNErAoXnivqqeIhv5
+    secure: KqVldW1Pof+b3vMCnQVgAl33DjCV9UIqv3aVccTANPgeNfYadBXkLnPnGHbYmuaW
   skip_symbols: false
   artifact: /.*\.nupkg/
