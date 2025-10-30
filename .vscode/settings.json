@@ -1,9 +1,13 @@
 {
+    "editor.codeActionsOnSave": {
+        "source.fixAll.markdownlint": "explicit",
+        "source.organizeImports": "explicit",
+        "source.removeUnusedImports": "explicit",
+        "source.sort.json": "explicit"
+    },
     "editor.formatOnSave": true,
     "editor.rulers": [
         120
     ],
-    "dotnet-test-explorer.testProjectPath": "WhatIsHeDoing.Core.Tests",
-    "omnisharp.autoStart": true,
-    "omnisharp.enableRoslynAnalyzers": true
+    "search.useIgnoreFiles": true
 }

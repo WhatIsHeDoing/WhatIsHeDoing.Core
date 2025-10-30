@@ -1,18 +1,31 @@
 version: 2
+
 updates:
-- package-ecosystem: nuget
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "20:00"
-    timezone: Greenwich
-  open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: Microsoft.NET.Test.Sdk
-    versions:
-    - 16.8.3
-    - 16.9.1
-    - 16.9.4
-  - dependency-name: xunit.runner.visualstudio
-    versions:
-    - 2.4.3
+    - cooldown:
+          default-days: 14
+          semver-major-days: 30
+          semver-minor-days: 14
+          semver-patch-days: 7
+
+      directory: "/"
+
+      # This consolidates updates into a maximum of 2 PRs.
+      # https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/optimizing-pr-creation-version-updates
+      groups:
+          major:
+              update-types:
+                  - major
+
+          minor-and-patch:
+              update-types:
+                  - minor
+                  - patch
+
+      open-pull-requests-limit: 10
+      package-ecosystem: nuget
+
+      schedule:
+          day: monday
+          interval: weekly
+          time: "20:00"
+          timezone: Europe/London

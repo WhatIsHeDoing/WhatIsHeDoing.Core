@@ -1,0 +1,16 @@
+cache:
+    cacheFormat: universal
+    cacheStrategy: metadata
+    useCache: true
+failFast: true
+ignorePaths:
+    - cspell.yml
+ignoreWords:
+    - netstandard2
+    - Skool
+    - Xunit
+language: en-GB,en
+suggestionsTimeout: 100
+useGitignore: true
+words:
+    - timespans
