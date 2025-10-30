@@ -4,9 +4,10 @@ cache:
     useCache: true
 failFast: true
 ignorePaths:
+    - .gitignore
     - cspell.yml
+    - "**/*.csproj"
 ignoreWords:
-    - netstandard2
     - Skool
     - Xunit
 language: en-GB,en

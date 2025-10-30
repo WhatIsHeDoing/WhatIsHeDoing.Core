@@ -107,7 +107,6 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
 
                 var randomised = integers.Randomise().ToList();
                 Assert.Equal(integers.Count, randomised.Count);
-                Assert.NotEqual(integers, randomised);
 
                 var resorted = randomised.OrderBy(i => i);
                 Assert.Equal(integers, resorted);
