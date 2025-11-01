@@ -5,7 +5,7 @@ namespace WhatIsHeDoing.Core.Extensions
     using System.Linq;
 
     /// <summary>
-    /// Provides extension methods for string.
+    /// Provides extension methods for the <see cref="string">string</see> class.
     /// </summary>
     public static class StringExtensions
     {

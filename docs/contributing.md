@@ -1,0 +1,19 @@
+# Contributing
+
+## 🆘 Contributing
+
+Changes are welcome! Please read the following advice before submitting a new pull request:
+
+- Search previous pull requests before adding a new one, as yours may be a duplicate.
+- Create an individual pull request for each group of related functionality.
+- Make sure your editor respects the `.editorconfig` [settings][editorconfig].
+- Take a look through the source code and try and match its coding style to your submission.
+- Add unit tests where possible, and run them using `just test` before submitting.
+- Consider how the project version should be bumped: it currently follows the [SemVer] scheme.
+- Finally: let's try and keep this professional, and fun if possible! For more information, see the [Contributor Covenant].
+
+Thanks for your help!
+
+[Contributor Covenant]: https://www.contributor-covenant.org/
+[editorconfig]: http://editorconfig.org/
+[SemVer]: http://semver.org/

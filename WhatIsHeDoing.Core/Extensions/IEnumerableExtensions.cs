@@ -6,7 +6,7 @@ namespace WhatIsHeDoing.Core.Extensions
     using System.Security.Cryptography;
 
     /// <summary>
-    /// Provides extension methods for the IEnumerable interface
+    /// Provides extension methods for the <see cref="IEnumerable">IEnumerable</see> interface.
     /// </summary>
     public static class IEnumerableExtensions
     {

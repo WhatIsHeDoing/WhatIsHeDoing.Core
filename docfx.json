@@ -1,0 +1,56 @@
+{
+    "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+    "build": {
+        "content": [
+            {
+                "exclude": [
+                    "cspell.yml",
+                    "_site/**"
+                ],
+                "files": [
+                    "**/*.{md,yml}"
+                ]
+            }
+        ],
+        "globalMetadata": {
+            "_appName": "WhatIsHeDoing.Core",
+            "_appTitle": "WhatIsHeDoing.Core",
+            "_enableSearch": true,
+            "pdf": true
+        },
+        "output": "_site",
+        "resource": [
+            {
+                "files": [
+                    "images/**"
+                ]
+            }
+        ],
+        "sitemap": {
+            "baseUrl": "https://whatishedoing.github.io/WhatIsHeDoing.Core/",
+            "changefreq": "monthly",
+            "priority": 0.1
+        },
+        "template": [
+            "default",
+            "modern"
+        ]
+    },
+    "metadata": [
+        {
+            "output": "api",
+            "references": [
+                "/WhatIsHeDoing.Core/obj/Debug/net8.0/WhatIsHeDoing.Core.dll",
+                "/WhatIsHeDoing.Core/obj/Debug/net8.0/WhatIsHeDoing.Core.pdb"
+            ],
+            "src": [
+                {
+                    "files": [
+                        "**/WhatIsHeDoing.Core.csproj"
+                    ],
+                    "src": "./WhatIsHeDoing.Core"
+                }
+            ]
+        }
+    ]
+}

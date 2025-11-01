@@ -37,3 +37,18 @@ jobs:
 
             - name: Publish the NuGet package
               run: dotnet nuget push ${{ github.workspace }}/nuget/*.nupkg --api-key ${{ secrets.NUGET_APIKEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+
+            - name: Install the documentation tool
+              run: dotnet tool update -g docfx
+
+            - name: Generate the docs
+              run: docfx docfx.json
+
+            - name: Upload the docs
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: "_site"
+
+            - name: Deploy the docs to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4

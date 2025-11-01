@@ -8,6 +8,9 @@ ignorePaths:
     - cspell.yml
     - "**/*.csproj"
 ignoreWords:
+    - APIKEY
+    - changefreq
+    - docfx
     - Skool
     - Xunit
 language: en-GB,en

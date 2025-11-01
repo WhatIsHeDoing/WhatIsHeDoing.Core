@@ -1,0 +1,4 @@
+- name: Guide
+  href: docs/
+- name: Package
+  href: api/
