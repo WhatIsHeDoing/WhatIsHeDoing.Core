@@ -1,10 +1,8 @@
-# Contributing
-
-## 🆘 Contributing
+# 🆘 Contributing
 
 Changes are welcome! Please read the following advice before submitting a new pull request:
 
-- Search previous pull requests before adding a new one, as yours may be a duplicate.
+- Search previous [pull requests] before adding a new one, as yours may be a duplicate.
 - Create an individual pull request for each group of related functionality.
 - Make sure your editor respects the `.editorconfig` [settings][editorconfig].
 - Take a look through the source code and try and match its coding style to your submission.
@@ -16,4 +14,5 @@ Thanks for your help!
 
 [Contributor Covenant]: https://www.contributor-covenant.org/
 [editorconfig]: http://editorconfig.org/
+[pull requests]: https://github.com/WhatIsHeDoing/WhatIsHeDoing.Core/pulls
 [SemVer]: http://semver.org/

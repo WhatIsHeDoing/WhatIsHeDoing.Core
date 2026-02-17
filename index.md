@@ -4,7 +4,7 @@ _layout: landing
 
 # WhatIsHeDoing.Core
 
-This is the documentation of a library of extensions to core .NET functionality.
+A library of extensions to core .NET functionality.
 
 ## 👀 Get Started
 

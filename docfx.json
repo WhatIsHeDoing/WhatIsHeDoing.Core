@@ -13,6 +13,8 @@
             }
         ],
         "globalMetadata": {
+            "_appFaviconPath": "images/favicon.ico",
+            "_appLogoPath": "images/apple-touch-icon-60x60.png",
             "_appName": "WhatIsHeDoing.Core",
             "_appTitle": "WhatIsHeDoing.Core",
             "_enableSearch": true,
