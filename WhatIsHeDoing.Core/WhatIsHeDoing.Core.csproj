@@ -1,39 +1,38 @@
 <Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <TargetFrameworks>net8.0</TargetFrameworks>
-        <PackageId>WhatIsHeDoing.Core</PackageId>
-        <PackageVersion>8.0.0</PackageVersion>
-        <Authors>WhatIsHeDoing</Authors>
-        <Description>A library of extensions to core .NET functionality.</Description>
-        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-        <PackageReleaseNotes>Upgrading to .NET 5!</PackageReleaseNotes>
-        <Copyright>
-        </Copyright>
-        <PackageTags>core extensions</PackageTags>
-        <PackageLicenseExpression>Unlicense</PackageLicenseExpression>
-        <PackageProjectUrl>https://github.com/WhatIsHeDoing/WhatIsHeDoing.Core</PackageProjectUrl>
-        <Version>8.0.0</Version>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Company />
-        <RepositoryUrl>https://github.com/WhatIsHeDoing/WhatIsHeDoing.Core</RepositoryUrl>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
-        <IconUrl>https://darrenhickling.com/static/favicons/apple-touch-icon-60x60.png</IconUrl>
-        <IsPackable>true</IsPackable>
-    </PropertyGroup>
-    <PropertyGroup>
-        <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-        <WarningsAsErrors />
-    </PropertyGroup>
-    <PropertyGroup
-        Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
-        <DebugType>full</DebugType>
-        <DebugSymbols>true</DebugSymbols>
-    </PropertyGroup>
-    <ItemGroup>
-        <PackageReference Include="RoslynSecurityGuard" Version="2.3.0" />
-    </ItemGroup>
-    <!-- https://devblogs.microsoft.com/dotnet/add-a-readme-to-your-nuget-package/ -->
-    <ItemGroup>
-        <None Include="..\README.md" Pack="true" PackagePath="\" />
-    </ItemGroup>
+  <PropertyGroup>
+    <TargetFrameworks>net10.0</TargetFrameworks>
+    <PackageId>WhatIsHeDoing.Core</PackageId>
+    <PackageVersion>10.0.0</PackageVersion>
+    <Authors>WhatIsHeDoing</Authors>
+    <Description>A library of extensions to core .NET functionality.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Upgrading to .NET 5!</PackageReleaseNotes>
+    <Copyright>
+    </Copyright>
+    <PackageTags>core extensions</PackageTags>
+    <PackageLicenseExpression>Unlicense</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/WhatIsHeDoing/WhatIsHeDoing.Core</PackageProjectUrl>
+    <Version>10.0.0</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company />
+    <RepositoryUrl>https://github.com/WhatIsHeDoing/WhatIsHeDoing.Core</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IconUrl>https://darrenhickling.com/static/favicons/apple-touch-icon-60x60.png</IconUrl>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="RoslynSecurityGuard" />
+  </ItemGroup>
+  <!-- https://devblogs.microsoft.com/dotnet/add-a-readme-to-your-nuget-package/ -->
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 </Project>

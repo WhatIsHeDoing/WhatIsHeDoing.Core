@@ -34,10 +34,6 @@ test_release:
 pack:
     dotnet pack --configuration Release --no-restore --output ./nuget
 
-# 👀 Runs the demo API project.
-api:
-    dotnet run --project WhatIsHeDoing.DomainModels.APITest
-
 # ⬆️ Upgrades all library dependencies.
 outdated:
     dotnet outdated --upgrade
