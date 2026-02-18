@@ -4,6 +4,8 @@ on:
     push:
         branches:
             - live
+        tags:
+            - "v*"
 
     pull_request:
         branches:
@@ -22,6 +24,8 @@ jobs:
         steps:
             - name: Check out the repo
               uses: actions/checkout@v6
+              with:
+                  fetch-depth: 0
 
             - name: Set up .NET
               uses: actions/setup-dotnet@v5
@@ -35,25 +39,39 @@ jobs:
               run: dotnet build --configuration Release
 
             - name: Run tests
-              run: dotnet test
+              run: >
+                  dotnet test --configuration Release
+                  /p:CollectCoverage=true
+                  /p:CoverletOutputFormat=cobertura
+                  /p:CoverletOutput=./coverage/
+
+            - name: Upload coverage to Codecov
+              uses: codecov/codecov-action@v5
+              with:
+                  files: ./WhatIsHeDoing.Core.Tests/coverage/coverage.cobertura.xml
 
             - name: Pack the project
               run: dotnet pack --configuration Release --no-restore --output ${{ github.workspace }}/nuget
 
             - name: Publish the NuGet package
+              if: startsWith(github.ref, 'refs/tags/v')
               run: dotnet nuget push ${{ github.workspace }}/nuget/*.nupkg --api-key ${{ secrets.NUGET_APIKEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
 
             - name: Install the documentation tool
+              if: github.ref == 'refs/heads/live'
               run: dotnet tool update -g docfx
 
             - name: Generate the docs
+              if: github.ref == 'refs/heads/live'
               run: docfx docfx.json
 
             - name: Upload the docs
+              if: github.ref == 'refs/heads/live'
               uses: actions/upload-pages-artifact@v4
               with:
                   path: "_site"
 
             - name: Deploy the docs to GitHub Pages
+              if: github.ref == 'refs/heads/live'
               id: deployment
               uses: actions/deploy-pages@v4

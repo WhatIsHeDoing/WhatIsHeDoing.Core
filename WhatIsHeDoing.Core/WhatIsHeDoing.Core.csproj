@@ -2,7 +2,6 @@
   <PropertyGroup>
     <TargetFrameworks>net10.0</TargetFrameworks>
     <PackageId>WhatIsHeDoing.Core</PackageId>
-    <PackageVersion>10.0.0</PackageVersion>
     <Authors>WhatIsHeDoing</Authors>
     <Description>A library of extensions to core .NET functionality.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -12,8 +11,8 @@
     <PackageTags>core extensions</PackageTags>
     <PackageLicenseExpression>Unlicense</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/WhatIsHeDoing/WhatIsHeDoing.Core</PackageProjectUrl>
-    <Version>10.0.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
     <Company />
     <RepositoryUrl>https://github.com/WhatIsHeDoing/WhatIsHeDoing.Core</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -29,6 +28,10 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="MinVer">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="RoslynSecurityGuard" />
   </ItemGroup>
   <!-- https://devblogs.microsoft.com/dotnet/add-a-readme-to-your-nuget-package/ -->
