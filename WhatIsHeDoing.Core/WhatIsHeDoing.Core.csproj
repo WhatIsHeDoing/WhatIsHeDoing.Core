@@ -6,7 +6,7 @@
     <Authors>WhatIsHeDoing</Authors>
     <Description>A library of extensions to core .NET functionality.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Upgrading to .NET 5!</PackageReleaseNotes>
+    <PackageReleaseNotes>Upgrading to .NET 10!</PackageReleaseNotes>
     <Copyright>
     </Copyright>
     <PackageTags>core extensions</PackageTags>
@@ -19,10 +19,10 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <IconUrl>https://darrenhickling.com/static/favicons/apple-touch-icon-60x60.png</IconUrl>
     <IsPackable>true</IsPackable>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
   <PropertyGroup>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningsAsErrors />
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
     <DebugType>full</DebugType>

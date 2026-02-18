@@ -41,7 +41,7 @@ namespace WhatIsHeDoing.Core.Extensions
         /// <param name="us">The collections to also enumerate with</param>
         /// <returns>A single collection</returns>
         public static IEnumerable<T> IterateJagged<T>(
-            this IEnumerable<T> me, params IEnumerable<T>[] us)
+            this IEnumerable<T> me, params IEnumerable<T>?[] us)
         {
             foreach (var iterator in me.ZipJagged(us))
             {
@@ -86,7 +86,7 @@ namespace WhatIsHeDoing.Core.Extensions
         /// <param name="us">The collections to also enumerate with</param>
         /// <returns>A collection of collections</returns>
         public static IEnumerable<IEnumerable<T>> ZipJagged<T>(
-            this IEnumerable<T> me, params IEnumerable<T>[] us)
+            this IEnumerable<T> me, params IEnumerable<T>?[] us)
         {
             // Join the collections, ignore the null ones
             // and grab their enumerators.
@@ -94,7 +94,7 @@ namespace WhatIsHeDoing.Core.Extensions
                 new List<IEnumerator<T>> { me.GetEnumerator() }
                 .Concat(us
                     .Where(u => u != null)
-                    .Select(u => u.GetEnumerator()))
+                    .Select(u => u!.GetEnumerator()))
                 .ToList();
 
             while (true)

@@ -66,7 +66,7 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
             {
                 var firstRow = new List<int> { 1 };
                 var secondRow = new List<int> { 4, 5 };
-                List<int> thirdRow = null;
+                List<int>? thirdRow = null;
                 var fourthRow = new List<int> { 7, 8, 9 };
                 var fifthRow = new List<int>();
                 var sixthRow = new List<int> { 10, 11 };
@@ -98,7 +98,7 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
         {
             [Fact]
             public void ThrowsForNull() => Assert.Throws<ArgumentNullException>(
-                () => IEnumerableExtensions.Randomise<IEnumerable<int>>(null));
+                () => IEnumerableExtensions.Randomise<IEnumerable<int>>(null!));
 
             [Fact]
             public void Randomises()
@@ -118,7 +118,7 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
             [Fact]
             public void FiltersNulls()
             {
-                var strings = new List<string> { "Hello", null, "world!" };
+                var strings = new List<string> { "Hello", null!, "world!" };
                 var actual = strings.WhereNotNull();
                 var expected = new List<string> { "Hello", "world!" };
                 Assert.Equal(expected, actual);
@@ -126,7 +126,7 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
 
             [Fact]
             public void ThrowsForNull() => Assert.Throws<ArgumentNullException>(
-                () => IEnumerableExtensions.WhereNotNull<List<int>>(null));
+                () => IEnumerableExtensions.WhereNotNull<List<int>>(null!));
         }
 
         public class ZipJagged
@@ -162,7 +162,7 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
             {
                 var firstRow = new List<int> { 1 };
                 var secondRow = new List<int> { 4, 5 };
-                List<int> thirdRow = null;
+                List<int>? thirdRow = null;
                 var fourthRow = new List<int> { 7, 8, 9 };
                 var fifthRow = new List<int>();
                 var sixthRow = new List<int> { 10, 11 };

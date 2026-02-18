@@ -14,7 +14,7 @@ namespace WhatIsHeDoing.Core.Extensions
         /// </summary>
         /// <param name="source">To parse</param>
         /// <returns>Formatted string or original if not a decimal</returns>
-        public static string AsCurrency(this string source) =>
+        public static string? AsCurrency(this string? source) =>
             string.IsNullOrWhiteSpace(source)
             ? source
             : decimal.TryParse(
@@ -32,7 +32,7 @@ namespace WhatIsHeDoing.Core.Extensions
         /// <returns>
         /// <c>true</c> if the value is a boolean and true, or <c>false</c>
         /// </returns>
-        public static bool IsTrue(this string value) =>
+        public static bool IsTrue(this string? value) =>
             bool.TryParse(value, out bool result) && result;
 
         /// <summary>
@@ -78,11 +78,11 @@ namespace WhatIsHeDoing.Core.Extensions
 
             if (methodInfo == null)
             {
-                result = default(TResult);
+                result = default!;
                 return false;
             }
 
-            result = (TResult)methodInfo.Invoke(null, new object[] { value });
+            result = (TResult)methodInfo.Invoke(null, new object[] { value })!;
             return true;
         }
     }

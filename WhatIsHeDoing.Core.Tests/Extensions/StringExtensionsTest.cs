@@ -22,7 +22,7 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
             [InlineData("")]
             [InlineData(" ")]
             [InlineData("oops")]
-            public void InvalidCurrency(string currency) =>
+            public void InvalidCurrency(string? currency) =>
                 Assert.Equal(currency, currency.AsCurrency());
         }
 
@@ -33,7 +33,7 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
             [InlineData(" ")]
             [InlineData(null)]
             [InlineData("oops")]
-            public void InvalidBoolean(string value) =>
+            public void InvalidBoolean(string? value) =>
                 Assert.False(value.IsTrue());
 
             [Theory]

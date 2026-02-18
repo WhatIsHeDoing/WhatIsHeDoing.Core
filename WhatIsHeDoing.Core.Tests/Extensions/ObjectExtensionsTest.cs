@@ -10,11 +10,11 @@ namespace WhatIsHeDoing.Core.Tests.Extensions
         {
             [Fact]
             public void NullObject() => Assert.Throws<ArgumentNullException>(
-                () => ObjectExtensions.AsFluent<string>(null, DoSomething));
+                () => ObjectExtensions.AsFluent<string>(null!, DoSomething));
 
             [Fact]
             public void NullAction() => Assert.Throws<ArgumentNullException>(
-                () => 5.AsFluent(null));
+                () => 5.AsFluent(null!));
 
             [Fact]
             public void Simple()
