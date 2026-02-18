@@ -21,7 +21,7 @@ permissions:
 jobs:
     analyze:
         name: Analyze
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-24.04
 
         steps:
             - name: Check out the repo
@@ -32,13 +32,16 @@ jobs:
               with:
                   dotnet-version: "10.0.x"
 
+            - name: Restore dependencies
+              run: dotnet restore
+
+            - name: Build
+              run: dotnet build --configuration Release
+
             - name: Initialize CodeQL
               uses: github/codeql-action/init@v3
               with:
                   languages: csharp
-
-            - name: Build
-              run: dotnet build --configuration Release
 
             - name: Perform CodeQL analysis
               uses: github/codeql-action/analyze@v3
