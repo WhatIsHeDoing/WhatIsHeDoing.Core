@@ -26,22 +26,24 @@ jobs:
         steps:
             - name: Check out the repo
               uses: actions/checkout@v6
+              with:
+                  fetch-depth: 0
 
             - name: Set up .NET
               uses: actions/setup-dotnet@v5
               with:
                   dotnet-version: "10.0.x"
 
+            - name: Initialize CodeQL
+              uses: github/codeql-action/init@v3
+              with:
+                  languages: csharp
+
             - name: Restore dependencies
               run: dotnet restore
 
             - name: Build
               run: dotnet build --configuration Release
-
-            - name: Initialize CodeQL
-              uses: github/codeql-action/init@v3
-              with:
-                  languages: csharp
 
             - name: Perform CodeQL analysis
               uses: github/codeql-action/analyze@v3
