@@ -41,8 +41,8 @@ outdated:
 # ⬆️ Runs an interactive framework upgrade.
 upgrade:
     # https://learn.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-how-to-upgrade#upgrade-a-project-from-the-cli
-    upgrade-assistant upgrade
+    dotnet upgrade-assistant upgrade
 
 # 📝 Builds and runs the documentation.
 docs:
-    docfx docfx.json --serve
+    dotnet docfx docfx.json --serve

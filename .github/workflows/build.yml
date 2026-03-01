@@ -36,11 +36,14 @@ jobs:
               uses: actions/cache@v4
               with:
                   path: ~/.nuget/packages
-                  key: ${{ runner.os }}-nuget-${{ hashFiles('**/Directory.Packages.props', '**/*.csproj') }}
+                  key: ${{ runner.os }}-nuget-${{ hashFiles('**/Directory.Packages.props', '**/*.csproj', '.config/dotnet-tools.json') }}
                   restore-keys: ${{ runner.os }}-nuget-
 
             - name: Restore dependencies
               run: dotnet restore
+
+            - name: Restore dotnet tools
+              run: dotnet tool restore
 
             - name: Run the build
               run: dotnet build --configuration Release
@@ -64,13 +67,9 @@ jobs:
               if: startsWith(github.ref, 'refs/tags/v')
               run: dotnet nuget push ${{ github.workspace }}/nuget/*.nupkg --api-key ${{ secrets.NUGET_APIKEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
 
-            - name: Install the documentation tool
-              if: github.ref == 'refs/heads/live'
-              run: dotnet tool update -g docfx
-
             - name: Generate the docs
               if: github.ref == 'refs/heads/live'
-              run: docfx docfx.json
+              run: dotnet docfx docfx.json
 
             - name: Upload the docs
               if: github.ref == 'refs/heads/live'
