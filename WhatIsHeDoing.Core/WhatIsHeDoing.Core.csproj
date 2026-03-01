@@ -32,7 +32,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="RoslynSecurityGuard" />
   </ItemGroup>
   <!-- https://devblogs.microsoft.com/dotnet/add-a-readme-to-your-nuget-package/ -->
   <ItemGroup>

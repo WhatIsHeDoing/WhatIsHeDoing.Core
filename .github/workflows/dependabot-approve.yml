@@ -61,4 +61,5 @@ jobs:
 name: Dependabot auto-approve
 on: pull_request
 permissions:
+    contents: write
     pull-requests: write
