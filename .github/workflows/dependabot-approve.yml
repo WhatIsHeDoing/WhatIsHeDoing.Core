@@ -25,11 +25,14 @@ jobs:
               uses: actions/cache@v4
               with:
                   path: ~/.nuget/packages
-                  key: ${{ runner.os }}-nuget-${{ hashFiles('**/Directory.Packages.props', '**/*.csproj') }}
+                  key: ${{ runner.os }}-nuget-${{ hashFiles('**/Directory.Packages.props', '**/*.csproj', '.config/dotnet-tools.json') }}
                   restore-keys: ${{ runner.os }}-nuget-
 
             - name: Restore dependencies
               run: dotnet restore
+
+            - name: Restore dotnet tools
+              run: dotnet tool restore
 
             - name: Run the build
               run: dotnet build --configuration Release
@@ -40,11 +43,8 @@ jobs:
             - name: Pack the project
               run: dotnet pack --configuration Release --no-restore --output ${{ github.workspace }}/nuget
 
-            - name: Install the documentation tool
-              run: dotnet tool update -g docfx
-
             - name: Generate the docs
-              run: docfx docfx.json
+              run: dotnet docfx docfx.json
 
             - env:
                   GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
