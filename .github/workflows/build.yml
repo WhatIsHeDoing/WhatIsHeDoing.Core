@@ -57,7 +57,7 @@ jobs:
                   /p:CoverletOutput=./coverage/
 
             - name: Upload coverage to Codecov
-              uses: codecov/codecov-action@v5
+              uses: codecov/codecov-action@v6
               with:
                   files: ./WhatIsHeDoing.Core.Tests/coverage/coverage.cobertura.xml
 
@@ -74,11 +74,11 @@ jobs:
 
             - name: Upload the docs
               if: github.ref == 'refs/heads/live'
-              uses: actions/upload-pages-artifact@v4
+              uses: actions/upload-pages-artifact@v5
               with:
                   path: "_site"
 
             - name: Deploy the docs to GitHub Pages
               if: github.ref == 'refs/heads/live'
               id: deployment
-              uses: actions/deploy-pages@v4
+              uses: actions/deploy-pages@v5
