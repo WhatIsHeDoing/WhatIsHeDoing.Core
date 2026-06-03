@@ -9,15 +9,15 @@ jobs:
 
         steps:
             - name: Fetch the Dependabot metadata
-              uses: dependabot/fetch-metadata@ffa630c65fa7e0ecfa0625b5ceda64399aea1b36
+              uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98
               with:
                   github-token: "${{ secrets.GITHUB_TOKEN }}"
 
             - name: Check out the repo
-              uses: actions/checkout@v6
+              uses: actions/checkout@v6.0.2
 
             - name: Set up .NET
-              uses: actions/setup-dotnet@v5
+              uses: actions/setup-dotnet@v5.2.0
               with:
                   dotnet-version: "10.0.x"
 
