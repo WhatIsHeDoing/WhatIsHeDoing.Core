@@ -30,17 +30,17 @@ jobs:
                   fetch-depth: 0
 
             - name: Set up .NET
-              uses: actions/setup-dotnet@v5.2.0
+              uses: actions/setup-dotnet@v5.3.0
               with:
                   dotnet-version: "10.0.x"
 
             - name: Initialize CodeQL
-              uses: github/codeql-action/init@v4.35.5
+              uses: github/codeql-action/init@v4.36.2
               with:
                   languages: csharp
 
             - name: Cache NuGet packages
-              uses: actions/cache@v5
+              uses: actions/cache@v5.0.5
               with:
                   path: ~/.nuget/packages
                   key: ${{ runner.os }}-nuget-${{ hashFiles('**/Directory.Packages.props', '**/*.csproj') }}
@@ -53,4 +53,4 @@ jobs:
               run: dotnet build --configuration Release
 
             - name: Perform CodeQL analysis
-              uses: github/codeql-action/analyze@v4.35.5
+              uses: github/codeql-action/analyze@v4.36.2
